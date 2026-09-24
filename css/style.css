@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* ==========================================================================
+   1. VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
+   ========================================================================== */
+:root {
+    /* Paleta Principal e Tema */
+    --header-color: #99B89B;
+    --background-color: #B8AE98;
+    --tertiary-color: #B898A4;
+    --neutral-color: #98A1B8;
+    --text-color: #3F6341;
+    --link-color: #9AA9B8;
+    
+    /* Cores de Texto e Títulos */
+    --color-text-main: #030303;
+    --color-text-dark: #000000;
+    --color-title: #331F19;
+    --color-placeholder: #798252;
+    --color-btn-text: #ffffff;
+    
+    /* Gradiente do Fundo */
+    --bg-gradient-top: #fdf9f4;
+    --bg-gradient-middle: #fff1d3;
+    --bg-gradient-bottom: #3b2903;
+    
+    /* Cores de Bordas, Divisores e Efeitos */
+    --color-border-input: #CCD595;
+    --color-border-light: rgba(0, 0, 0, 0.08);
+    --color-border-divider: rgba(0, 0, 0, 0.15);
+    
+    /* Cores Transparentes para Cartões e Campos */
+    --bg-input: rgba(255, 255, 255, 0.4);
+    --bg-pilares: rgba(255, 255, 255, 0.35);
+    --bg-faq: rgba(255, 255, 255, 0.25);
+    --bg-card: rgba(255, 255, 255, 0.5);
+    --bg-card-hover: rgba(255, 255, 255, 0.85);
+    
+    /* Sombras */
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================================================
+   2. RESET E ESTRUTURA BASE
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, var(--bg-gradient-top) 30%, var(--bg-gradient-middle) 80%, var(--bg-gradient-bottom) 200%);
+    background-attachment: fixed;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: var(--color-text-main);
+}
+
+/* ==========================================================================
+   3. CABEÇALHO E NAVEGAÇÃO
+   ========================================================================== */
+header, .cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: var(--header-color);
+}
+
+.logo img {
+    margin: 0;
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.menu-navegacao {
+    display: flex;
+    gap: 25px;
+}
+
+.menu-navegacao a, a {
+    color: var(--color-text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: opacity 0.2s ease;
+}
+
+.menu-navegacao a:hover, a:hover {
+    opacity: 0.5;
+}
+
+.nav-link .bi-cart4 {
+    font-size: 1.2rem; 
+    color: #333; 
+    cursor: pointer; 
+}
+
+header button {
+    background: transparent; 
+    border: none;             
+    padding: 0;              
+    cursor: pointer;         
+}
+.meu-carrinho-icon {
+    font-size: 20px; 
+    color: #333;      
+}
+
+/* ==========================================================================
+   4. LAYOUT PRINCIPAL E ELEMENTOS DE TEXTO
+   ========================================================================== */
+main {
+    flex: 1; 
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+h2 {
+    color: var(--color-title);
+    font-size: 1.2rem;
+}
+
+p {
+    padding: 1rem;
+    color: var(--color-text-main);
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   5. FORMULÁRIOS E CONTATO
+   ========================================================================== */
+.secao-contato {
+    width: 100%;
+}
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 1.5rem auto 0 auto;
+    text-align: left;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    width: 100%;
+}
+
+.campo-form label {
+    font-weight: 500;
+    color: var(--color-title);
+    font-size: 0.95rem;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+textarea {
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color-border-input);
+    border-radius: 10px;
+    background-color: var(--bg-input);
+    outline-color: var(--color-title);
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--color-text-main);
+    resize: vertical;
+}
+
+input::placeholder, 
+textarea::placeholder {
+    color: var(--color-placeholder);
+    text-align: left;
+}
+
+.btn-enviar {
+    background-color: var(--text-color);
+    color: var(--color-btn-text);
+    border: none;
+    padding: 0.85rem 1.75rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+    align-self: center;
+    margin-top: 0.5rem;
+}
+
+.btn-enviar:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   6. GRID DE PRODUTOS GERAL
+   ========================================================================== */
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 1rem;
+    padding: 20px;
+    align-items: stretch;
+}
+
+.produto-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.produto-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.produto-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+}
+
+.produto-item img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto 12px auto;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 1 !important; 
+    filter: none !important;
+}
+
+.produto-titulo {
+    font-size: 14px;
+    font-weight: normal;
+    color: #333333;
+    line-height: 1.3;
+    margin: 0;
+    transition: color 0.2s ease;
+}
+
+.produto-link:hover .produto-titulo {
+    color: #3483fa;
+}
+
+.preco {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2b2b2b;
+    margin-top: auto; 
+    padding-top: 12px;
+}
+
+/*
+==========================================================================
+7. PÁGINA DE DETALHES DO PRODUTO (produto1.html)
+========================================================================== */
+
+.produto-detalhe-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.produto-detalhe-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+    align-items: center;
+}
+
+.produto-detalhe-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.produto-detalhe-imagem img {
+    width: 100%;
+    max-width: 450px; /* Imagem bem maior que a da grade */
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Área das Informações (Título, Preço e Textos) */
+.produto-detalhe-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.produto-detalhe-info h1 {
+    font-size: 26px;
+    color: #2b2b2b;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.preco-detalhe {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2b2b2b;
+    margin: 0;
+}
+
+.descricao-secao h3, 
+.beneficios-secao h3 {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 6px;
+}
+
+.descricao-secao p {
+    font-size: 15px;
+    color: #666666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.beneficios-secao ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Botão de Compra Estilizado */
+.btn-comprar {
+    background-color: #3483fa; /* Azul padrão e-commerce */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #2968c8;
+}
+
+/* Responsividade para telas menores (celulares) */
+@media (max-width: 768px) {
+    .produto-detalhe-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .produto-detalhe-imagem img {
+        max-width: 100%;
+    }
+}
+
+/* ==========================================================================
+   7. RODAPÉ
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   8. SEÇÃO INSTITUCIONAL / SOBRE NÓS
+   ========================================================================== */
+.secao-info {
+    text-align: left;
+    max-width: 850px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.secao-info h1, 
+.secao-info h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.subtitulo {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.lista-pilares {
+    list-style: none; 
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 0;
+}
+
+.lista-pilares li {
+    background-color: var(--bg-pilares);
+    padding: 1.2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--text-color);
+    line-height: 1.5;
+}
+
+.divisor {
+    border: 0;
+    height: 1px;
+    background-color: var(--color-border-divider);
+    margin: 2rem 0;
+}
+
+/* ==========================================================================
+   9. DESTAQUES E BANNERS
+   ========================================================================== */
+.destaques {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.item-faq {
+    background-color: var(--bg-faq);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border-light);
+    width: 100%;
+}
+
+.item-faq summary {
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.lista-banners-destaque {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    width: 100%;
+}
+
+.banner-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-card);
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.banner-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--bg-card-hover);
+}
+
+.img-banner-destaque {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.legenda-banner {
+    padding: 1rem 0.8rem;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   10. RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 768px) {
+    .lista-banners-destaque {
+        grid-template-columns: 1fr; 
+    }
+}
+
+
+/*
+================================================================================
+  GUIA E DOCUMENTAÇÃO DO CÓDIGO CSS (MYCARE)
+================================================================================
+
+1. VARIÁVEIS E CONFIGURAÇÕES GLOBAIS (:root)
+--------------------------------------------------------------------------------
+O bloco :root é o elemento pai de todo o documento HTML. Definir variáveis aqui 
+permite reutilizar cores e valores em todo o arquivo de forma centralizada.
+
+- --header-color (#99B89B): Verde claro para o fundo do cabeçalho.
+- --background-color (#B8AE98): Cor bege/castanho de reserva para o fundo.
+- --tertiary-color (#B898A4): Tom rosa/púrpura de destaque.
+- --neutral-color (#98A1B8): Tom azul/cinza neutro.
+- --text-color (#3F6341): Verde escuro da marca (usado no botão e destaques).
+- --link-color (#9AA9B8): Cor para hiperlinks.
+- --color-text-main (#030303): Preto suave para o texto principal (fácil leitura).
+- --color-text-dark (#000000): Preto puro para navegação e elementos de contraste.
+- --color-title (#331F19): Castanho escuro para títulos e rótulos do formulário.
+- --color-placeholder (#798252): Verde/oliva para o texto de dica dentro das caixas.
+- --color-btn-text (#ffffff): Branco puro para o texto do botão de envio.
+- --bg-gradient-top (#fdf9f4): Tom bege claro para o topo do gradiente.
+- --bg-gradient-middle (#fff1d3): Tom creme para o meio do gradiente.
+- --bg-gradient-bottom (#3b2903): Castanho escuro para o fim do gradiente.
+- --color-border-input (#CCD595): Verde claro para as bordas dos inputs.
+- --color-border-light (rgba(0, 0, 0, 0.08)): Borda preta com 8% de opacidade.
+- --color-border-divider (rgba(0, 0, 0, 0.15)): Linha divisória com 15% de opacidade.
+- --bg-input (rgba(255, 255, 255, 0.4)): Fundo branco a 40% de opacidade para inputs.
+- --bg-pilares (rgba(255, 255, 255, 0.35)): Fundo branco a 35% de opacidade.
+- --bg-faq (rgba(255, 255, 255, 0.25)): Fundo branco a 25% de opacidade.
+- --bg-card (rgba(255, 255, 255, 0.5)): Fundo branco a 50% de opacidade para cartões.
+- --bg-card-hover (rgba(255, 255, 255, 0.85)): Fundo branco a 85% de opacidade no hover.
+- --shadow-card: Sombra suave aplicada aos cartões.
+
+
+2. RESET E ESTRUTURA BASE (*, html, body)
+--------------------------------------------------------------------------------
+Limpa as margens/espaçamentos padrão que cada navegador aplica por padrão.
+
+- * { margin: 0; padding: 0; box-sizing: border-box; }:
+  Garante que a largura/altura dos elementos inclua bordas e paddings, evitando
+  que caixas quebrem o layout ou "estourem" a tela.
+- html, body { min-height: 100vh; }:
+  Garante que o site ocupe pelo menos 100% da altura da tela visual (Viewport).
+- body:
+  Configura Flexbox em coluna (cabeçalho -> conteúdo -> rodapé), fundo gradiente
+  fixo ao rolar a página, fonte padrão "DM Sans" e alinhamento central genérico.
+
+
+3. CABEÇALHO E NAVEGAÇÃO (header, .cabecalho, .logo, .menu-navegacao)
+--------------------------------------------------------------------------------
+- header, .cabecalho: Usa Flexbox para colocar logo à esquerda e menu à direita,
+  com alinhamento vertical ao centro e fundo verde claro.
+- .logo img: Força a altura da logo para 80px e calcula a largura automaticamente,
+  evitando distorção visual.
+- .menu-navegacao: Alinha os links na horizontal com 25px de espaçamento entre eles.
+- .menu-navegacao a: Links em preto, sem sublinhado, com transição de opacidade
+  para o efeito hover (ficam 50% transparentes ao passar o mouse).
+
+
+4. LAYOUT PRINCIPAL E TEXTOS (main, section, h2, p)
+--------------------------------------------------------------------------------
+- main: Ocupa todo o espaço vertical livre entre cabeçalho e rodapé (flex: 1).
+  Organiza seções em coluna, limita a largura máxima em 1100px e centraliza a página.
+- section: Empilha conteúdos internamente na vertical com espaçamento uniforme.
+- h2 / p: Estilização tipográfica e espaçamentos padrão de títulos e parágrafos.
+
+
+5. FORMULÁRIOS E CONTATO (.secao-contato, .form-contato, .campo-form, input, textarea, .btn-enviar)
+--------------------------------------------------------------------------------
+- .form-contato:
+  Container principal do formulário. Flexbox em coluna, limitado a 500px de
+  largura máxima e centralizado na tela. Aplica "text-align: left" para anular
+  a centralização herdada do body e alinhar os rótulos à esquerda.
+- .campo-form:
+  Junta cada <label> ao seu <input>. O Flexbox em coluna garante que o rótulo
+  fique logo ACIMA da caixa de digitação.
+- input[type="..."], textarea:
+  Caixas com largura de 100% do container, bordas arredondadas (10px), fundo
+  translúcido e "text-align: left" para que o texto e placeholders fiquem
+  alinhados à esquerda sem cortar palavras.
+  A textarea possui "resize: vertical" para permitir ajustar a altura sem quebrar
+  a largura do formulário.
+- .btn-enviar:
+  Botão customizado com a cor verde escuro da marca (--text-color) e texto branco.
+  Possui "align-self: center" para centralizar apenas o botão no formulário.
+  No hover, eleva-se 2px (translateY(-2px)) para criar um efeito 3D de clique.
+
+
+6. GRID DE PRODUTOS GERAL (.produtos-grid, .produto-item img)
+--------------------------------------------------------------------------------
+- .produtos-grid: Usa CSS Grid com 3 colunas de tamanhos iguais (repeat(3, 1fr))
+  e espaçamento de 20px entre itens.
+- .produto-item img: Imagens adaptáveis com largura máxima de 250px, cantos
+  arredondados (8px) e recorte proporcional (object-fit: cover).
+
+
+7. RODAPÉ (footer)
+--------------------------------------------------------------------------------
+- footer: Texto do rodapé centralizado, com espaçamento confortável e cor verde
+  escuro da marca.
+
+
+8. SEÇÃO INSTITUCIONAL / SOBRE NÓS (.secao-info, .lista-pilares, .divisor)
+--------------------------------------------------------------------------------
+- .secao-info: Bloco de texto informativo alinhado à esquerda para leitura fluida,
+  limitado a 850px de largura.
+- .lista-pilares li: Lista de pilares sem marcadores padrão (pontos), estruturada
+  em cartões translúcidos com uma borda verde na lateral esquerda.
+- .divisor: Linha horizontal customizada (1px) substituindo a borda padrão do <hr>.
+
+
+9. DESTAQUES E BANNERS (.destaques, .item-faq, .lista-banners-destaque, .banner-card)
+--------------------------------------------------------------------------------
+- .item-faq: Bloco de perguntas frequentes com borda suave e cantos arredondados (12px).
+- .lista-banners-destaque: Grelha CSS Grid com 3 colunas para banners visuais.
+- .banner-card: Cartões interativos que sobem 5px (translateY(-5px)) e ficam mais
+  claros ao passar o mouse.
+
+
+10. RESPONSIVIDADE (@media)
+--------------------------------------------------------------------------------
+- @media (max-width: 768px):
+  Para telas menores (smartphones/tablets), altera a grelha de 3 colunas de banners
+  para 1 coluna única na vertical, adaptando o layout perfeitamente para dispositivos móveis.
+================================================================================
+*/
+
+/*                <button class="btn btn-brand-primary btn-sm w-100">Comprar</button>*/

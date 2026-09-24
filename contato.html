@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - MyCare</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="imagens/banners/logo.png" alt="Logo MyCare">
+        </div>
+
+        <nav class="menu-navegacao">
+            <a href="index.html">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html">Contato</a>
+
+            <button class="btn border-0 bg-transparent p-0">
+                    <i class="bi bi-cart4 meu-carrinho-icon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="secao-contato">
+            <h1>Entre em Contato</h1>
+            <p>Estamos aqui para ajudar! Preencha o formulário abaixo e entraremos em contato com você em breve.</p>
+
+            <form action="#" method="post" class="form-contato">
+                <div class="campo-form">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxx-xxxx">
+                </div>
+
+                <div class="campo-form">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p><small>© 2026 MyCare. Todos os direitos reservados.</small></p>
+    </footer>
+
+</body>
+
+</html>
