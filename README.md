@@ -123,7 +123,8 @@ loja_produtos/
 - Dica: No VS Code, utilize a extensão Live Server para rodar um servidor local com recarregamento automático.
 
 4. **Demonstração Online (GitHub Pages):**
-   - [Acessar MyCare no GitHub Pages](https://github.com/VitorAssalin/mycare-css-stylesheet.git)
+   - [Acessar MyCare no GitHub Pages](https://vitorassalin.github.io/mycare-css-stylesheet/
+)
 
 ---
 
