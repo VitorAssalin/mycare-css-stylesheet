@@ -109,12 +109,12 @@ loja_produtos/
 
 1. **Clonar o repositório:**
    ```bash
-   git clone [https://github.com/VitorAssalin/MyCare.git](https://github.com/seu-usuario/loja_produtos.git)
+   git clone (git clone https://github.com/VitorAssalin/mycare-css-stylesheet.git)
    
 
 2. **Acessar o diretório do projeto:**
     ```bash
-    cd loja_produtos
+    cd mycare-css-stylesheet
 
 3. **Executar no Navegador:**
 
