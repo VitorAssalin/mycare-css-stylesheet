@@ -99,10 +99,20 @@ header, .cabecalho {
     opacity: 0.5;
 }
 
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px; 
+}
+
 .nav-link .bi-cart4 {
-    font-size: 1.2rem; 
-    color: #333; 
-    cursor: pointer; 
+    font-size: 1.1rem;
+    color: #333;
+    vertical-align: middle;
+}
+.nav-link.active {
+    font-weight: bold;
+    color: #2b2b2b;
 }
 
 header button {
@@ -112,7 +122,7 @@ header button {
     cursor: pointer;         
 }
 .meu-carrinho-icon {
-    font-size: 20px; 
+    font-size: 60px; 
     color: #333;      
 }
 
@@ -211,7 +221,7 @@ textarea::placeholder {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: opacity 0.2s ease, transform 0.1s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
     align-self: center;
     margin-top: 0.5rem;
 }
@@ -290,7 +300,7 @@ textarea::placeholder {
 
 /*
 ==========================================================================
-7. PÁGINA DE DETALHES DO PRODUTO (produto1.html)
+7. PÁGINA DE DETALHES DO PRODUTO 
 ========================================================================== */
 
 .produto-detalhe-container {
@@ -321,7 +331,7 @@ textarea::placeholder {
 
 .produto-detalhe-imagem img {
     width: 100%;
-    max-width: 450px; /* Imagem bem maior que a da grade */
+    max-width: 450px;
     height: auto;
     object-fit: contain;
     border-radius: 8px;
@@ -371,9 +381,8 @@ textarea::placeholder {
     line-height: 1.5;
 }
 
-/* Botão de Compra Estilizado */
 .btn-comprar {
-    background-color: #3483fa; /* Azul padrão e-commerce */
+    background-color: #3483fa;
     color: #ffffff;
     border: none;
     border-radius: 6px;
@@ -389,7 +398,6 @@ textarea::placeholder {
     background-color: #2968c8;
 }
 
-/* Responsividade para telas menores (celulares) */
 @media (max-width: 768px) {
     .produto-detalhe-card {
         flex-direction: column;
@@ -487,7 +495,7 @@ footer {
     width: 100%;
 }
 
-.banner-card {
+.banner-card, .produto-item {
     display: flex;
     flex-direction: column;
     background-color: var(--bg-card);
