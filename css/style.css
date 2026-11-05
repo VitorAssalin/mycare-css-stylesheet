@@ -393,12 +393,25 @@ textarea::placeholder {
     margin-top: 10px;
     transition: background-color 0.2s ease;
 }
+.btn-addCarAll {
+    background-color:transparent;
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
 
 .btn-comprar:hover {
     background-color: #2968c8;
 }
-.btn-addCar:hover {
-    background-color: #2968c8;
+.btn-addCarAll:hover {
+    background-color: transparent;
+    color: #2968c8;
 }
 
 @media (max-width: 768px) {
