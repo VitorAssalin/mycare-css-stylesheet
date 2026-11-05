@@ -381,7 +381,7 @@ textarea::placeholder {
     line-height: 1.5;
 }
 
-.btn-comprar {
+.btn-comprar, .btn-addCar {
     background-color: #3483fa;
     color: #ffffff;
     border: none;
@@ -395,6 +395,9 @@ textarea::placeholder {
 }
 
 .btn-comprar:hover {
+    background-color: #2968c8;
+}
+.btn-addCar:hover {
     background-color: #2968c8;
 }
 
