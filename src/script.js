@@ -37,7 +37,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const contador = document.getElementById("contador-carrinho");
-  const botoesAdicionar = document.querySelectorAll(".btn-addCarAll");
+  const botoesAdicionar = document.querySelectorAll(".btn-addCarAll, .btn-addCar");
 
   // Obtém os produtos salvos ou inicializa array vazio
   function obterCarrinho() {
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Extrai os dados do produto no HTML
       const tituloElemento = containerProduto.querySelector(".produto-titulo") || containerProduto.querySelector("h1") || containerProduto.querySelector("h2");
-      const precoElemento = containerProduto.querySelector(".preco");
+      const precoElemento = containerProduto.querySelector(".preco, .preco-detalhe");
       const imgElemento = containerProduto.querySelector("img");
 
       const titulo = tituloElemento ? tituloElemento.textContent.trim() : "Produto MyCare";
@@ -97,13 +97,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Feedback visual rápido no botão
       const textoOriginal = botao.textContent;
-      botao.textContent = "Adicionado! ✓";
+      botao.textContent = "Adicionado ✓";
       botao.disabled = true;
 
       setTimeout(() => {
         botao.textContent = textoOriginal;
         botao.disabled = false;
-      }, 700);
+      }, 400);
     });
   });
 });

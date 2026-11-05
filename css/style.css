@@ -409,6 +409,9 @@ textarea::placeholder {
 .btn-comprar:hover {
     background-color: #2968c8;
 }
+.btn-addCar:hover{
+    background-color: #2968c8;
+}
 .btn-addCarAll:hover {
     background-color: transparent;
     color: #2968c8;
